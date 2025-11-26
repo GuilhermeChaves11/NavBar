@@ -1,0 +1,116 @@
+/* 🎨 Variáveis e Reset (Baseado no ex02.html) */
+:root {
+    --cor-sidebar-bg: #000000; /* Preto */
+    --cor-sidebar-texto: #FFFFFF; /* Branco */
+    --cor-hover-bg: #333333; /* Cinzento Escuro */
+    --cor-active: #808080; /* Cinzento Médio */
+    --cor-fundo-pagina: #FFFFFF; /* Branco */
+    --cor-texto-pagina: #000000; /* Preto */
+    --largura-sidebar: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Base da Página */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-pagina);
+}
+
+/* -------------------------------------- */
+/* 🧭 Estilos da BARRA DE NAVEGAÇÃO (NAV) */
+/* -------------------------------------- */
+
+.sidebar {
+    position: fixed; /* Fixa a barra na lateral */
+    top: 0;
+    left: 0;
+    width: var(--largura-sidebar);
+    height: 100%;
+    background-color: var(--cor-sidebar-bg);
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Área do Logotipo/Título */
+.sidebar-header {
+    color: var(--cor-sidebar-texto);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px 30px;
+    border-bottom: 1px solid var(--cor-hover-bg);
+    margin-bottom: 10px;
+}
+
+/* Lista de Navegação */
+.sidebar-nav {
+    list-style: none;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--cor-sidebar-texto);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    transition: background-color 0.2s, color 0.2s;
+    border-left: 4px solid transparent; /* Para o indicador visual */
+}
+
+/* Efeito Hover */
+.sidebar-nav li a:hover {
+    background-color: var(--cor-hover-bg);
+    color: var(--cor-sidebar-texto);
+}
+
+/* Item Ativo (Usando a cor cinzenta média como indicador) */
+.sidebar-nav li a.active {
+    background-color: var(--cor-hover-bg);
+    color: var(--cor-sidebar-texto);
+    font-weight: bold;
+    border-left-color: var(--cor-active);
+}
+
+/* -------------------------------------- */
+/* 📄 Estilos do Conteúdo Principal */
+/* -------------------------------------- */
+
+.main-content {
+    margin-left: var(--largura-sidebar); /* Empurra o conteúdo para a direita */
+    padding: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--cor-fundo-pagina);
+    border: 2px solid var(--cor-texto-pagina);
+    padding: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info {
+    font-size: 12px;
+    color: var(--cor-active);
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cor-texto-pagina);
+}
