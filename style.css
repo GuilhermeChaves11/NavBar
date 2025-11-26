@@ -1,11 +1,10 @@
-/* 🎨 Variáveis e Reset (Baseado no ex02.html) */
 :root {
-    --cor-sidebar-bg: #000000; /* Preto */
-    --cor-sidebar-texto: #FFFFFF; /* Branco */
-    --cor-hover-bg: #333333; /* Cinzento Escuro */
-    --cor-active: #808080; /* Cinzento Médio */
-    --cor-fundo-pagina: #FFFFFF; /* Branco */
-    --cor-texto-pagina: #000000; /* Preto */
+    --cor-sidebar-bg: #000000;
+    --cor-sidebar-texto: #FFFFFF;
+    --cor-hover-bg: #333333;
+    --cor-active: #808080;
+    --cor-fundo-pagina: #FFFFFF;
+    --cor-texto-pagina: #000000;
     --largura-sidebar: 250px;
 }
 
@@ -15,19 +14,14 @@
     box-sizing: border-box;
 }
 
-/* Estilo Base da Página */
 body {
     font-family: 'Helvetica', Arial, sans-serif;
     background-color: var(--cor-fundo-pagina);
     color: var(--cor-texto-pagina);
 }
 
-/* -------------------------------------- */
-/* 🧭 Estilos da BARRA DE NAVEGAÇÃO (NAV) */
-/* -------------------------------------- */
-
 .sidebar {
-    position: fixed; /* Fixa a barra na lateral */
+    position: fixed;
     top: 0;
     left: 0;
     width: var(--largura-sidebar);
@@ -38,7 +32,6 @@ body {
     z-index: 1000;
 }
 
-/* Área do Logotipo/Título */
 .sidebar-header {
     color: var(--cor-sidebar-texto);
     font-size: 20px;
@@ -49,7 +42,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Lista de Navegação */
 .sidebar-nav {
     list-style: none;
 }
@@ -62,16 +54,14 @@ body {
     font-size: 14px;
     font-weight: normal;
     transition: background-color 0.2s, color 0.2s;
-    border-left: 4px solid transparent; /* Para o indicador visual */
+    border-left: 4px solid transparent;
 }
 
-/* Efeito Hover */
 .sidebar-nav li a:hover {
     background-color: var(--cor-hover-bg);
     color: var(--cor-sidebar-texto);
 }
 
-/* Item Ativo (Usando a cor cinzenta média como indicador) */
 .sidebar-nav li a.active {
     background-color: var(--cor-hover-bg);
     color: var(--cor-sidebar-texto);
@@ -79,12 +69,8 @@ body {
     border-left-color: var(--cor-active);
 }
 
-/* -------------------------------------- */
-/* 📄 Estilos do Conteúdo Principal */
-/* -------------------------------------- */
-
 .main-content {
-    margin-left: var(--largura-sidebar); /* Empurra o conteúdo para a direita */
+    margin-left: var(--largura-sidebar);
     padding: 40px;
 }
 
@@ -100,6 +86,28 @@ h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+.action-btn:hover {
+    background-color: #333333;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 p {
